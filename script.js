@@ -23,20 +23,22 @@ function generatePassword(){
  // Defining password length and checking to make sure its within length requirements
 
 var ln = parseInt(prompt("How long would you like the password to be?"))
-
+console.log(ln);
 // Boolean for password length
-var passLength = false;
+var passLength, ans = false;
+
 
 // While loop to garuntee proper length
 
-while(passLength != true){
+while(passLength != true && ans != true){
 
-  if (ln < 8 || ln > 128) {
+  if (ln < 8 || ln > 128 || isNaN(ln)){
     ln = parseInt(prompt("Please enter a valid password length"));
   }
+  
 
   else {
-    passLength = true;
+    passLength, ans = true;
   }
 
 } 
